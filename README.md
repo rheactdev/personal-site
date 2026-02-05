@@ -1,5 +1,14 @@
 ![Astro Nano](_astro_nano.png)
 
+| Field       | Req | Type    | Remarks                                          |
+| :---------- | :-- | :------ | :----------------------------------------------- |
+| title       | Yes | string  | Title of the content. Used in SEO and RSS.       |
+| description | Yes | string  | Description of the content. Used in SEO and RSS. |
+| date        | Yes | string  | Must be a valid date string (able to be parsed). |
+| draft       | No  | boolean | draft: true, content will not be published.      |
+| demoURL     | No  | string  | Link to live project demo, if applicable.        |
+| repoURL     | No  | string  | Link to project repo, if applicable.             |
+
 Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
 
 Built with Astro, Tailwind and Typescript, an no frameworks.

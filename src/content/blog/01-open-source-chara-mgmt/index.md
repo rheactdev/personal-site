@@ -19,9 +19,7 @@ Once the base features are implemented, I'd like to include a few extra features
 I did some initial research and decided on a couple tools for the stack:
 
 ### Supabase (back-end)
-The actual data stored is fairly simple for a single instance, so I created a quick concept in Supabase:
-![Screenshot of initial backend design](https://link.storjshare.io/raw/jvf4cd3arbmkv7clgdkt7zy3ls5a/personal/00-33-34-395.png)
-Depending on how complicated it gets with user management, I may roll my own Spring Boot backend, but this is plenty for now.
+The actual data stored is fairly simple for a single instance, so I created a quick concept in Supabase.Depending on how complicated it gets with user management, I may roll my own Spring Boot backend, but this is plenty for now.
 
 ## Next.js (front-end)
 After a little bit of debate, I decided to go with Next.js for the following:
