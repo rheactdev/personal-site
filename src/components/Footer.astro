@@ -2,6 +2,7 @@
 import Container from "@components/Container.astro";
 import { SITE } from "@consts";
 import BackToTop from "@components/BackToTop.astro";
+import Link from "./Link.astro";
 ---
 
 <footer class="animate">
@@ -16,7 +17,7 @@ import BackToTop from "@components/BackToTop.astro";
         &copy; 2024 {`|`} {SITE.NAME}
       </div>
       <div class="join">
-        <button id="everforest-theme-button" aria-label="Everforest theme" class="btn btn-ghost btn-sm join-item">🌲 Everforest</button>
+        <Link href="mailto:contact@rheamanuel.com">contact@rheamanuel.com</Link>
       </div>
     </div>
   </Container>
