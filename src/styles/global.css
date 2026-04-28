@@ -1,6 +1,7 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
 @plugin "daisyui";
+@import "./everforest.css";
 
 @theme {
   --font-sans: "Outfit", sans-serif;
@@ -9,12 +10,9 @@
 
 html {
   overflow-y: scroll;
-  color-scheme: light;
-}
-
-html[data-theme="night"] {
   color-scheme: dark;
 }
+
 
 html,
 body {
