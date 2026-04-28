@@ -1,4 +1,11 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "daisyui";
+
+@theme {
+  --font-sans: "Outfit", sans-serif;
+  --font-serif: "Outfit", sans-serif;
+}
 
 html {
   overflow-y: scroll;
@@ -15,14 +22,11 @@ body {
 }
 
 body {
-  @apply flex flex-col font-sans antialiased;
-  background-color: hsl(var(--b1));
-  color: hsl(var(--bc) / 0.7);
+  @apply flex flex-col font-sans antialiased bg-base-100 text-base-content/70;
 }
 
 header {
-  @apply fixed top-0 left-0 right-0 z-50 py-5 backdrop-blur-sm;
-  background-color: hsl(var(--b1) / 0.8);
+  @apply fixed top-0 left-0 right-0 z-50 py-5 bg-base-100/80 backdrop-blur-sm;
 }
 
 main {
@@ -34,34 +38,12 @@ footer {
 }
 
 article {
-  @apply max-w-full;
-}
-
-article img {
-  @apply mx-auto my-auto;
-}
-
-article h1,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6 {
-  @apply font-semibold;
-}
-
-article p {
-  @apply font-serif;
+  @apply max-w-full prose prose-img:mx-auto prose-img:my-auto prose-headings:font-semibold prose-p:font-sans;
 }
 
 @layer utilities {
   article a {
-    @apply underline underline-offset-2 transition-opacity;
-    opacity: 0.9;
-  }
-
-  article a:hover {
-    opacity: 1;
+    @apply link link-hover text-current;
   }
 }
 
