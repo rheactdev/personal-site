@@ -160,6 +160,9 @@ function toggleTheme(dark) {
 
     document.head.appendChild(css);
 
+    const nextTheme = dark ? "night" : "light";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+
     if (dark) {
       document.documentElement.classList.add("dark");
     } else {
