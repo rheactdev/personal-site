@@ -1,8 +1,8 @@
 ---
 company: "Cloud Computing Consultants"
 role: "Full-Stack Web Developer"
-dateStart: "08/2025"
-dateEnd: "01/2026"
+dateStart: "08/01/2025"
+dateEnd: "01/01/2026"
 ---
 
 * Built Angular UI dashboards for student loan management applications.
