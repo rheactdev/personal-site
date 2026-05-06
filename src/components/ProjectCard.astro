@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+    entry: CollectionEntry<"projects">;
+};
+
+const { entry } = Astro.props;
+---
+
+<a
+    href={entry.data.repoURL || entry.data.demoURL}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="card card-border bg-base-100 hover:bg-base-200 transition-colors duration-300"
+>
+    <div class="card-body p-4">
+        <div class="flex items-center justify-between gap-4">
+            <div class="min-w-0">
+                <div class="font-semibold text-base-content">
+                    {entry.data.title}
+                </div>
+                <div class="text-sm truncate">
+                    {entry.data.description}
+                </div>
+            </div>
+            {
+                /* Changed the arrow to point up-right to signify an external link */
+            }
+            {
+                entry.data.repoURL ? (
+                    <span class="text-lg" aria-hidden="true">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            x="0px"
+                            y="0px"
+                            width="30"
+                            height="30"
+                            viewBox="0 0 30 30"
+                            fill="currentColor"
+                        >
+                            <path d="M 16.984375 3.9863281 A 1.0001 1.0001 0 0 0 16.019531 4.8046875 L 12.019531 24.804688 A 1.0001 1.0001 0 1 0 13.980469 25.195312 L 17.980469 5.1953125 A 1.0001 1.0001 0 0 0 16.984375 3.9863281 z M 7.2519531 7.9882812 A 1.0001 1.0001 0 0 0 6.4257812 8.421875 L 2.1835938 14.421875 A 1.0001 1.0001 0 0 0 2.1835938 15.578125 L 6.4257812 21.578125 A 1.0003738 1.0003738 0 0 0 8.0585938 20.421875 L 4.2246094 15 L 8.0585938 9.578125 A 1.0001 1.0001 0 0 0 7.2519531 7.9882812 z M 22.960938 7.9882812 A 1.0001 1.0001 0 0 0 22.183594 9.578125 L 26.017578 15 L 22.183594 20.421875 A 1.0003736 1.0003736 0 1 0 23.816406 21.578125 L 28.058594 15.578125 A 1.0001 1.0001 0 0 0 28.058594 14.421875 L 23.816406 8.421875 A 1.0001 1.0001 0 0 0 22.960938 7.9882812 z" />
+                        </svg>
+                    </span>
+                ) : (
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        x="0px"
+                        y="0px"
+                        width="30"
+                        height="30"
+                        viewBox="0 0 30 30"
+                        fill="currentColor"
+                    >
+                        <path d="M 25.980469 2.9902344 A 1.0001 1.0001 0 0 0 25.869141 3 L 20 3 A 1.0001 1.0001 0 1 0 20 5 L 23.585938 5 L 13.292969 15.292969 A 1.0001 1.0001 0 1 0 14.707031 16.707031 L 25 6.4140625 L 25 10 A 1.0001 1.0001 0 1 0 27 10 L 27 4.1269531 A 1.0001 1.0001 0 0 0 25.980469 2.9902344 z M 6 7 C 4.9069372 7 4 7.9069372 4 9 L 4 24 C 4 25.093063 4.9069372 26 6 26 L 21 26 C 22.093063 26 23 25.093063 23 24 L 23 14 L 23 11.421875 L 21 13.421875 L 21 16 L 21 24 L 6 24 L 6 9 L 14 9 L 16 9 L 16.578125 9 L 18.578125 7 L 16 7 L 14 7 L 6 7 z" />
+                    </svg>
+                )
+            }
+        </div>
+    </div>
+</a>
